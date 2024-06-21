@@ -48,9 +48,13 @@
     <main>
         <h2>Upcoming Meetings</h2>
         <ul>
-            <li>Meeting with Client A - June 10, 2024 - 10:00 AM</li>
-            <li>Meeting with Client B - June 12, 2024 - 2:00 PM</li>
-            <li>Meeting with Client C - June 15, 2024 - 11:30 AM</li>
+            @foreach ($meeting as $data)
+                <h4>User Name : {{ $data->user->name }}</h1>
+                    <h4>Trainer Name : {{ $data->trainer->name }}</h1>
+                        <li>Time : {{ $data->meeting_time }} </li>
+                        <li>Link :  {{ $data->meeting_link }}</li>
+                        <hr>
+            @endforeach
         </ul>
     </main>
 @endsection

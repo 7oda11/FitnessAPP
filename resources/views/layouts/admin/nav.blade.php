@@ -57,7 +57,7 @@
             <a href="{{ route('administrator.profile') }}">Profile</a>
             <a href="{{ route('administrator.workouts') }}">workout</a>
             <a href="{{ route('administrator.meeting') }}">Meetings</a>
-            <a href="{{ route('administrator.exercise') }}">Exercise Settings</a>
+            {{-- <a href="{{ route('administrator.exercise') }}">Exercise Settings</a> --}}
             <a href="{{ route('administrator.logoutShow') }}">Logout</a>
         </nav>
     </header>

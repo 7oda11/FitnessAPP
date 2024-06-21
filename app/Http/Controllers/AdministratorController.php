@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Meeting;
 use App\Models\Workout;
 use Illuminate\Http\Request;
 
@@ -22,7 +23,8 @@ class AdministratorController extends Controller
     }
     public function meeting()
     {
-        return view('administrator.meeting');
+        $meeting=Meeting::all();
+        return view('administrator.meeting',compact('meeting'));
     }
     public function exercise()
     {

@@ -49,7 +49,11 @@
         <h2>Manage Workouts</h2>
         <ul id="workouts-list">
             @foreach ($exercise as $data)
-                <li>{{ $data->name }} : {{ $data->description }}</li>
+                <h4>User Name : {{ $data->user->name }}</h1>
+                    <h4>Trainer Name : {{ $data->trainer->name }}</h1>
+                        <li>Content Name : {{ $data->name }}</li>
+                        <li>Content Description :  {{ $data->description }}</li>
+                        <hr>
             @endforeach
         </ul>
     </main>
